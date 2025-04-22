@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript while Loop with Names</h2>
+<p id="demo"></p>
+<script>
+var names = [];  // Array to store names
+var text = "";   // String to build HTML output
+var i = 0;       // Counter variable
+
+// Collect 5 names using while loop
+while (i < 5) {
+    names[i] = prompt("Enter name " + (i + 1) + " of 5:");
+    i++;
+}
+
+// Reset counter for display loop
+i = 0;
+
+// Build output string with names using while loop
+text = "<h3>Names List:</h3><ul>";
+while (i < names.length) {
+    text += "<li>" + names[i] + "</li>";
+    i++;
+}
+text += "</ul>";
+
+// Display the names list
+document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>
